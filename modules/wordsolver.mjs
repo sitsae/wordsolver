@@ -1,4 +1,5 @@
 // returns a list of words only containing letters from letterArr
+let counter = 0;
 const filterWords = (wordArr, letterArr) => {
   const words = [];
   let wordHolder = [];
@@ -7,6 +8,7 @@ const filterWords = (wordArr, letterArr) => {
       for (let wordLetter of word) {
         if (letter === wordLetter) {
           wordHolder.push(letter);
+          counter +=1;
         }
       }
     }
@@ -15,6 +17,9 @@ const filterWords = (wordArr, letterArr) => {
     }
     wordHolder = [];
   }
+  console.log(
+    counter
+  );
   return words;
 };
 
