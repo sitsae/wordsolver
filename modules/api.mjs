@@ -1,5 +1,5 @@
 // An array of the letters from the word game
-const letterArr = ["a", "j", "p", "ø", "l", "b", "o"];
+const letterArr = ["t", "j", "i", "ø", "s", "b", "o"];
 
 // path
 const path = "/api/suggest";
@@ -33,10 +33,7 @@ const getWords = async () => {
       return item[0];
     });
 
-    const concatWordArr = exactArr.concat(freeTextArr).sort();
-    const wordArr = concatWordArr.filter(
-      (word, i, arr) => arr.indexOf(word) === i
-    );
+    const wordArr = exactArr.concat(freeTextArr).sort();
 
     return wordArr;
   } catch (e) {
