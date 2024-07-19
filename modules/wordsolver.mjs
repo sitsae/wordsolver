@@ -1,25 +1,9 @@
-// returns a list of words only containing letters from letterArr
-let counter = 0;
 const filterWords = (wordArr, letterArr) => {
-  const initialWords = [];
-  let wordHolder = [];
-  for (let word of wordArr) {
-    for (let letter of letterArr) {
-      for (let wordLetter of word) {
-        if (letter === wordLetter) {
-          wordHolder.push(letter);
-          counter += 1;
-        }
-      }
-    }
-    if (wordHolder.length === word.length && word.length > 3) {
-      initialWords.push(word);
-    }
-    wordHolder = [];
-  }
-  console.log(counter);
+  const initialWords = wordArr.filter(
+    (word) =>
+      word.length > 3 && [...word].every((letter) => letterArr.includes(letter))
+  );
   const words = initialWords.filter((word, i, arr) => arr.indexOf(word) === i);
-
   return words;
 };
 

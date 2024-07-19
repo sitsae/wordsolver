@@ -1,0 +1,11 @@
+{
+  "name": "wordsolver-main",
+  "version": "1.0.0",
+  "description": "The program uses [University of Bergen's](https://ordbokene.no/api) dictionary API to get all norwegian words that match the letter array given to the program.",
+  "main": "main.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

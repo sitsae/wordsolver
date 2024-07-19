@@ -1,12 +1,12 @@
 // An array of the letters from the word game
-const letterArr = ["t", "j", "i", "ø", "s", "b", "o"];
+const letterArr = ["e", "m", "s", "j", "o", "å", "g"];
 
 // path
 const path = "/api/suggest";
 const prefix = "https://ord.uib.no";
 
 // adds wildcard to every letter for querystring
-const arrAsWildCards = () => letterArr.map((letter) => `${letter}_*|`);
+const arrAsWildCards = () => letterArr.map((letter) => `${letter}*|`);
 
 // parameters
 const params = {
